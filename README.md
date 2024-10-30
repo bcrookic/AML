@@ -66,7 +66,7 @@ and put them into data `data/`
 4. binary classification model include：
     classifier.py
 
-   command: python classifier.py --mlp_hidden=64 --lr=0.05 --mode=NE+AF --lm=0.7
+   `command: python classifier.py --mlp_hidden=64 --lr=0.05 --mode=NE+AF --lm=0.7`
 
 # Wait to do
 1. Stability over the training percentage of the graph embedding
