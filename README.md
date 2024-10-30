@@ -1,12 +1,3 @@
-# PaPAML
-Source code and data for 
-Node2Vec:KDD, 2016.
-《node2vec: Scalable Feature Learning for Networks》
-(https://www.kdd.org/kdd2016/papers/files/rfp0218-groverA.pdf) 
-and 
-GCN-elliptic dataset
-(https://www.kaggle.com/code/karthikapv/gcn-elliptic-dataset/notebook)
-
 # Paper:
 A Plug-and-Play Data-Driven Approach for Anti-Money Laundering in Bitcoin
 
@@ -21,9 +12,12 @@ A Plug-and-Play Data-Driven Approach for Anti-Money Laundering in Bitcoin
  - sklearn
 
 # Prepare Data
+Source code and data for GCN-elliptic dataset (https://www.kaggle.com/code/karthikapv/gcn-elliptic-dataset/notebook)
+
+
 Before running the models, some preprocessing is needed:
 Download data from `https://pan.quark.cn/s/a7b2b764f84c`
-and put them into data `data/`
+and put them into `data/`
 
 
 # How to run
@@ -32,19 +26,23 @@ and put them into data `data/`
     `command: python preprocessor.py`
 
 2. graph embedding model include：
-    main.py
-    nodeEmb.py
-    walker.py
-    alias.py
-    utils.py
+
+   main.py
+
+   nodeEmb.py
+
+   walker.py
+
+   alias.py
+
+   utils.py
     
-    # Input format
     we use `networkx`to create graphs.The input of networkx graph is as follows:
     entity1 entity2 weight/similarity
   
     `command: python main.py`
 
-3. dimension reduction of the elliptic data:  
+4. dimension reduction of the elliptic data:  
 
     use gcn_get_pkl.py to get the `.pkl` of the elliptic data
 
@@ -63,7 +61,7 @@ and put them into data `data/`
     `command: python pkl_csv.py`
     
 
-4. binary classification model include：
+5. binary classification model include：
     classifier.py
 
    `command: python classifier.py --mlp_hidden=64 --lr=0.05 --mode=NE+AF --lm=0.7`
