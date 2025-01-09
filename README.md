@@ -15,17 +15,19 @@ A Plug-and-Play Data-Driven Approach for Anti-Money Laundering in Bitcoin
 Source code and data for GCN-elliptic dataset (https://www.kaggle.com/code/karthikapv/gcn-elliptic-dataset/notebook)
 
 
-Before running the models, some preprocessing is needed:
+Due to file size restrictions on uploads, before running the models, some preprocessing is needed:
 Download data from `https://pan.quark.cn/s/a7b2b764f84c`
-and put them into `data/`
+and put them into corresponding folders
 
 
 # How to run
-1. use preprocessor.py to get graph（based on similarity or not) as the input of graph embedding model
+1. Use preprocessor.py to get graph（based on similarity or not) as the input of graph embedding model
     
     `command: python preprocessor.py`
 
-2. graph embedding model include：
+   You can also directly obtain relevant files from the existing dataset folder
+
+2. Graph embedding model include：
 
    main.py
 
@@ -37,22 +39,22 @@ and put them into `data/`
 
    utils.py
     
-    we use `networkx`to create graphs.The input of networkx graph is as follows:
+    We use `networkx`to create graphs.The input of networkx graph is as follows:
     entity1 entity2 weight/similarity
   
     `command: python main.py`
 
-4. dimension reduction of the elliptic data:  
+4. Dimension reduction of the elliptic data:  
 
-    use gcn_get_pkl.py to get the `.pkl` of the elliptic data
+    Use gcn_get_pkl.py to get the `.pkl` of the elliptic data
 
     `command: python gcn_get_pkl.py`
 
-    use Ordered_dictionary.py to get the ordered embedding_sim of the embedding
+    Use Ordered_dictionary.py to get the ordered embedding_sim of the embedding
 
     `command: python Ordered_dictionary.py`
 
-    use TruncatedSVD.py to reduce the dimensionality of the data
+    Use TruncatedSVD.py to reduce the dimensionality of the data
 
     `command: python TruncatedSVD.py`
 
@@ -61,7 +63,7 @@ and put them into `data/`
     `command: python pkl_csv.py`
     
 
-5. binary classification model include：
+5. Binary classification model include：
     classifier.py
 
    `command: python classifier.py --mlp_hidden=64 --lr=0.05 --mode=NE+AF --lm=0.7`
