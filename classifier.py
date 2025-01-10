@@ -171,10 +171,10 @@ num_epoch = 500
 batch_size = 64
 mode = args.mode
 limit = args.lm
-emb_file = "../data/dataset/embedding_sim.pkl"
+emb_file = "./dataset/embedding_sim.pkl"
 feature_file = "./raw_data/elliptic_txs_features.csv"
-label_file = "../data/dataset/label.txt"
-mapping_file = "../data/dataset/id2index.txt"
+label_file = "./dataset/label.txt"
+mapping_file = "./dataset/id2index.txt"
 emb_size, train_data_shuffled, train_label_shuffled, test_data_shuffled, test_label_shuffled = getData(mode,
                                                                                                        emb_file,
                                                                                                        feature_file,
