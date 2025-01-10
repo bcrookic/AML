@@ -44,15 +44,11 @@ and put them into corresponding folders
   
     `command: python main.py`
 
-4. Dimension reduction of the elliptic data:  
-
-    Use gcn_get_pkl.py to get the `.pkl` of the elliptic data
-
-    `command: python gcn_get_pkl.py`
+3. Dimension reduction of the elliptic data:  
 
     Use Ordered_dictionary.py to get the ordered embedding_sim of the embedding
 
-    `command: python Ordered_dictionary.py`
+    `command: python ./utility/Ordered_dictionary.py`
 
     Use TruncatedSVD.py to reduce the dimensionality of the data
 
@@ -60,13 +56,13 @@ and put them into corresponding folders
 
     You can merge the generated dimensionality reduction feature data and native elliptic feature data into a new feature file (`.csv`)
 
-    `command: python pkl_csv.py`
+    `command: python ./utility/pkl_csv.py`
     
 
-5. Binary classification model include：
+4. Binary classification model include：
     classifier.py
 
-   `command: python classifier.py --mlp_hidden=64 --lr=0.05 --mode=NE+AF --lm=0.7`
+   `command: python classifier.py`
 
 # Wait to do
 1. Stability over the training percentage of the graph embedding
