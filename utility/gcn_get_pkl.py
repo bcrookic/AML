@@ -54,11 +54,10 @@ def load_data(data_dir, start_ts, end_ts):
     return adj_mats, features_labelled_ts, classes_ts
 
 
-dir = "data/raw_data"
+dir = "raw_data"
 adj_mats, features_labelled_ts, classes_ts = load_data(dir, 0, 49)
 
 
-# 打开文件，以二进制写入模式，使用pickle将列表写入文件
 with open('adj_mats.pkl', 'wb') as file:
     pickle.dump(adj_mats, file)
 with open('features_labelled_ts.pkl', 'wb') as file:
