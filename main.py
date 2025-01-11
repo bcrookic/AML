@@ -1,6 +1,6 @@
 import pickle
 import networkx as nx
-from gcn.nodeEmb import NodeEmb
+from nodeEmb import NodeEmb
 
 
 if __name__ == "__main__":
