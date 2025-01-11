@@ -52,7 +52,7 @@ and put them into corresponding folders
 
     Use TruncatedSVD.py to reduce the dimensionality of the data
 
-    `command: python TruncatedSVD.py`
+    `command: python ./utility/TruncatedSVD.py`
 
     You can merge the generated dimensionality reduction feature data and native elliptic feature data into a new feature file (`.csv`)
 
