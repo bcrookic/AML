@@ -134,7 +134,7 @@ def saveLabel(label, save_file):
 if __name__ == "__main__":
     edges_file = "./raw_data/elliptic_txs_edgelist.csv"
     label_file = "./raw_data/elliptic_txs_classes.csv"
-    save_file = "../data/dataset/"
+    save_file = "./dataset/"
 
     id2index, nodes, edges_w, edges_sim = getEdges(edges_file)
     label = getLabel(len(nodes), id2index, label_file)
