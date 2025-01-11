@@ -1,5 +1,5 @@
 from gensim.models import Word2Vec
-from gcn.walker import RandomWalker
+from walker import RandomWalker
 
 
 class NodeEmb:
