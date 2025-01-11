@@ -59,10 +59,10 @@ and put them into corresponding folders
     `command: python ./utility/pkl_csv.py`
     
 
-4. Binary classification model include：
-    classifier.py
+4. Graph Convolutional Networks model include：
+    gcn.py
 
-   `command: python classifier.py`
+   `command: python gcn.py`
 
 # Wait to do
 1. Stability over the training percentage of the graph embedding
